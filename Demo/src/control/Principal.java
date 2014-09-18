@@ -26,7 +26,8 @@ public class Principal {
         try {
             float a = Float.parseFloat(f.nA.getText());
             float b = Float.parseFloat(f.nB.getText());
-            f.result.setText((a + b) + "");
+            String r = Float.toString(a+b);
+            f.result.setText(r);
         } catch (NumberFormatException ex) {
             f.result.setText("formato no compatible");
         }
@@ -37,7 +38,8 @@ public class Principal {
         try {
             float a = Float.parseFloat(f.nA.getText());
             float b = Float.parseFloat(f.nB.getText());
-            f.result.setText((a - b) + "");
+            String r = Float.toString(a-b);
+            f.result.setText(r);
         } catch (NumberFormatException ex) {
             f.result.setText("formato no compatible");
         }
@@ -49,7 +51,8 @@ public class Principal {
         try {
             float a = Float.parseFloat(f.nA.getText());
             float b = Float.parseFloat(f.nB.getText());
-            f.result.setText((a * b) + "");
+            String r = Float.toString(a*b);
+            f.result.setText(r);
         } catch (NumberFormatException ex) {
             f.result.setText("formato no compatible");
         }
@@ -61,7 +64,8 @@ public class Principal {
         try {
             float a = Float.parseFloat(f.nA.getText());
             float b = Float.parseFloat(f.nB.getText());
-            f.result.setText((a / b) + "");
+            String r = Float.toString(a/b);
+            f.result.setText(r);
         } catch (ArithmeticException ex) {
 
             f.result.setText("divicion por cero");
