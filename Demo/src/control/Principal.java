@@ -6,6 +6,7 @@
 package control;
 
 import Vista.Frame1;
+import java.awt.Color;
 
 /**
  *
@@ -43,9 +44,17 @@ public class Principal {
     }
 
     public void divi() {
+        f.result.setForeground(Color.BLACK);
         int a = Integer.parseInt(f.nA.getText());
         int b = Integer.parseInt(f.nB.getText());
-        f.result.setText((a / b) + "");
+        try {
+            f.result.setText((a / b) + "");
+        } catch (Exception e) {
+            
+            f.result.setText("divicion por cero");
+            
+        }
+        
 
     }
 
