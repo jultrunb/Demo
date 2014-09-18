@@ -24,8 +24,8 @@ public class Principal {
 
     public void suma() {
         try {
-            int a = Integer.parseInt(f.nA.getText());
-            int b = Integer.parseInt(f.nB.getText());
+            float a = Float.parseFloat(f.nA.getText());
+            float b = Float.parseFloat(f.nB.getText());
             f.result.setText((a + b) + "");
         } catch (NumberFormatException ex) {
             f.result.setText("formato no compatible");
@@ -35,8 +35,8 @@ public class Principal {
 
     public void resta() {
         try {
-            int a = Integer.parseInt(f.nA.getText());
-            int b = Integer.parseInt(f.nB.getText());
+            float a = Float.parseFloat(f.nA.getText());
+            float b = Float.parseFloat(f.nB.getText());
             f.result.setText((a - b) + "");
         } catch (NumberFormatException ex) {
             f.result.setText("formato no compatible");
@@ -47,8 +47,8 @@ public class Principal {
     public void multi() {
 
         try {
-            int a = Integer.parseInt(f.nA.getText());
-            int b = Integer.parseInt(f.nB.getText());
+            float a = Float.parseFloat(f.nA.getText());
+            float b = Float.parseFloat(f.nB.getText());
             f.result.setText((a * b) + "");
         } catch (NumberFormatException ex) {
             f.result.setText("formato no compatible");
@@ -59,8 +59,8 @@ public class Principal {
     public void divi() {
 
         try {
-            int a = Integer.parseInt(f.nA.getText());
-            int b = Integer.parseInt(f.nB.getText());
+            float a = Float.parseFloat(f.nA.getText());
+            float b = Float.parseFloat(f.nB.getText());
             f.result.setText((a / b) + "");
         } catch (ArithmeticException ex) {
 
