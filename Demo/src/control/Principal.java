@@ -23,38 +23,52 @@ public class Principal {
     }
 
     public void suma() {
-        int a = Integer.parseInt(f.nA.getText());
-        int b = Integer.parseInt(f.nB.getText());
-        f.result.setText((a + b) + "");
+        try {
+            int a = Integer.parseInt(f.nA.getText());
+            int b = Integer.parseInt(f.nB.getText());
+            f.result.setText((a + b) + "");
+        } catch (NumberFormatException ex) {
+            f.result.setText("formato no compatible");
+        }
 
     }
 
     public void resta() {
-        int a = Integer.parseInt(f.nA.getText());
-        int b = Integer.parseInt(f.nB.getText());
-        f.result.setText((a - b) + "");
+        try {
+            int a = Integer.parseInt(f.nA.getText());
+            int b = Integer.parseInt(f.nB.getText());
+            f.result.setText((a - b) + "");
+        } catch (NumberFormatException ex) {
+            f.result.setText("formato no compatible");
+        }
 
     }
 
     public void multi() {
-        int a = Integer.parseInt(f.nA.getText());
-        int b = Integer.parseInt(f.nB.getText());
-        f.result.setText((a * b) + "");
+
+        try {
+            int a = Integer.parseInt(f.nA.getText());
+            int b = Integer.parseInt(f.nB.getText());
+            f.result.setText((a * b) + "");
+        } catch (NumberFormatException ex) {
+            f.result.setText("formato no compatible");
+        }
 
     }
 
     public void divi() {
-        f.result.setForeground(Color.BLACK);
-        int a = Integer.parseInt(f.nA.getText());
-        int b = Integer.parseInt(f.nB.getText());
+
         try {
+            int a = Integer.parseInt(f.nA.getText());
+            int b = Integer.parseInt(f.nB.getText());
             f.result.setText((a / b) + "");
-        } catch (Exception e) {
-            
+        } catch (ArithmeticException ex) {
+
             f.result.setText("divicion por cero");
-            
+
+        } catch (NumberFormatException ex) {
+            f.result.setText("formato no compatible");
         }
-        
 
     }
 
